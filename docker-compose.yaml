@@ -27,8 +27,12 @@ services:
       MYSQL_USER: ${MYSQL_USER}  # Create a MySQL user 'myuser'
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}  # Set the password for 'myuser'
     volumes:
-      - ./.data/db:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
     ports:
       - "3307:3306"  # Map host port 3307 to container port 3306 for MySQL
     restart: always  # Restarts the MySQL container if it stops or crashes
     container_name: mysql_database
+
+volumes:
+  mysql_data:
+  

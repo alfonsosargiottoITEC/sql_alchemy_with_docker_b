@@ -16,19 +16,6 @@ services:
       - mysql_db
     container_name: flask_app_b
 
-    # links:
-    #   - app-db
-
-  # app-db:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-
-  #   environment:
-  #   - MYSQL_ROOT_PASSWORD=root
-  #   - MYSQL_DATABASE=root
-  #   ports:
-  #     - 3306:3306
 
   mysql_db:
     image: mysql:5.7  # Use the official MySQL 5.7 image from Docker Hub

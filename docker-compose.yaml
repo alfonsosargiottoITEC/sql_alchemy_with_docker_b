@@ -9,7 +9,7 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}  # Create a database named 'mydatabase'
       MYSQL_USER: ${MYSQL_USER}  # Create a MySQL user 'myuser'
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}  # Set the password for 'myuser'
-      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}  # Set the root password for MySQL
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}  # Set the root password for MySQL
     ports:
       - "3307:3306"  # Map host port 3307 to container port 3306 for MySQL
     command: --init-file /docker-entrypoint-initdb.d/create_schema.sql
